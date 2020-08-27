@@ -929,14 +929,34 @@ public class iTextBookmarksConverter implements IBookmarksConverter {
         showOnOpen = show;
     }
 
+    /**
+     * Return the width of the page, if pageNumber is grater than the page count
+     * it returns the width of the last page.
+     * 
+     * @param pageNumber The number of the page requested (first page is 1)
+     * @return Width of the page (default pdf unit)
+     */
     @Override
     public float getPageWidth(int pageNumber) {
+        if (pageNumber > getCountOfPages()) {
+            pageNumber = getCountOfPages();
+        }
         Rectangle pageSize = reader.getPageSize(pageNumber);
         return pageSize.getWidth();
     }
 
+    /**
+     * Return the height of the page, if pageNumber is grater than the page count
+     * it returns the height of the last page.
+     * 
+     * @param pageNumber The number of the page requested (first page is 1)
+     * @return Height of the page (default pdf unit)
+     */
     @Override
     public float getPageHeight(int pageNumber) {
+        if (pageNumber > getCountOfPages()) {
+            pageNumber = getCountOfPages();
+        }
         Rectangle pageSize = reader.getPageSize(pageNumber);
         return pageSize.getHeight();
     }
