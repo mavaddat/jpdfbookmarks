@@ -159,7 +159,7 @@ want as parameter. On Windows the command line program must be called with
 jpdfbookmarks_cli.exe while the graphic interface must be called with
 jpdfbookmarks.exe.
 
-| Parameter () | Description |
+| Parameter (-‍brev,-‍-‍longform) | Description |
 |-|-|
 | -a,--apply | Apply bookmarks from the file bookmarks.txt to a pdf file passed as argument and save it to a new pdf file specified with --out output.pdf. |
 | -d,--dump | Extract bookmarks from a PDF file passed as argument and print them to standard output. |
