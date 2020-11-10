@@ -1,5 +1,4 @@
-===============================================================================
-This is jpdfbookmarks
+# jpdfbookmarks
 
 Copyright (c) 2008 2009 2010 Flaviano Petrocchi <flavianopetrocchi@gmail.com>
 except where differently indicated in source code.
@@ -8,29 +7,27 @@ License: GNU General Public License version 3
 Author's Blog: http://flavianopetrocchi.blogspot.com/
 source-forge: http://sourceforge.net/projects/jpdfbookmarks/
 
-For licence information read COPYING file, read the dependencies section in 
+For licence information read [COPYING]() file, read the dependencies section in 
 this README for the licenses and copyright of the open source libraries used 
 by this project.
 
-===============================================================================
-
-Sections:
-- DESCRIPTION
-- DEPENDENCIES
-- HOW TO INSTALL AND UNINSTALL
-- HOW TO EXECUTE
-- HOW TO BUILD
-- HOW TO PACKAGE
-- HOW TO HELP
+## Sections:
+- [DESCRIPTION](#description)
+- [DEPENDENCIES](#dependencies)
+- [HOW TO INSTALL AND UNINSTALL](#how-to-install-and-uninstall)
+- [HOW TO EXECUTE](#how-to-execute)
+- [HOW TO BUILD](#how-to-build)
+- [HOW TO PACKAGE](#how-to-package)
+- [HOW TO HELP](#how-to-help)
 
 *******************************************************************************
-	DESCRIPTION
+DESCRIPTION
 *******************************************************************************
 
 This software allows you to create and edit bookmarks on existing pdf files.
 
 *******************************************************************************
-	DEPENDENCIES
+DEPENDENCIES
 *******************************************************************************
 
 This software requires a Java Runtime Environment version 6 or later for 
