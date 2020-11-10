@@ -1,34 +1,33 @@
 # jpdfbookmarks
 
-Copyright (c) 2008 2009 2010 Flaviano Petrocchi <flavianopetrocchi@gmail.com>
+Copyright (c) 2008 2009 2010 [Flaviano Petrocchi](mailto:flavianopetrocchi@gmail.com)
 except where differently indicated in source code.
+
+Copyright © 2020 [Mavaddat](@mavaddat)
 
 License: GNU General Public License version 3
 Author's Blog: http://flavianopetrocchi.blogspot.com/
-source-forge: http://sourceforge.net/projects/jpdfbookmarks/
+GitHub: https://github.com/mavaddat/jpdfbookmarks
 
-For licence information read [COPYING]() file, read the dependencies section in 
+For licence information read [COPYING](/COPYING) file, read the dependencies section in 
 this README for the licenses and copyright of the open source libraries used 
 by this project.
 
-## Sections:
-- [DESCRIPTION](#description)
-- [DEPENDENCIES](#dependencies)
-- [HOW TO INSTALL AND UNINSTALL](#how-to-install-and-uninstall)
-- [HOW TO EXECUTE](#how-to-execute)
-- [HOW TO BUILD](#how-to-build)
-- [HOW TO PACKAGE](#how-to-package)
-- [HOW TO HELP](#how-to-help)
+## Table of Contents
 
-*******************************************************************************
-DESCRIPTION
-*******************************************************************************
+1. [DESCRIPTION](#description)
+2. [DEPENDENCIES](#dependencies)
+3. [HOW TO INSTALL AND UNINSTALL](#how-to-install-and-uninstall)
+4. [HOW TO EXECUTE](#how-to-execute)
+5. [HOW TO BUILD](#how-to-build)
+6. [HOW TO PACKAGE](#how-to-package)
+7. [HOW TO HELP](#how-to-help)
+
+## DESCRIPTION
 
 This software allows you to create and edit bookmarks on existing pdf files.
 
-*******************************************************************************
-DEPENDENCIES
-*******************************************************************************
+## DEPENDENCIES
 
 This software requires a Java Runtime Environment version 6 or later for 
 information on how to install one on your system, or to check if you already
@@ -36,25 +35,25 @@ have it, go to http://www.java.com or search your system's software
 repositories. It uses the following libraries distributed in the lib folder 
 which are copyright of their respective authors:
 
-Apache Commons CLI
+### Apache Commons CLI
 Copyright 2001-2009 The Apache Software Foundation 
 http://commons.apache.org/cli/
 Apache License Version 2.0, January 2004
 http://www.apache.org/licenses/
 
-iText-2.1.7
+### iText-2.1.7
 Copyright 1999, 2000, 2001, 2002 by Bruno Lowagie.
 http://www.lowagie.com/iText/
 GNU LIBRARY GENERAL PUBLIC LICENSE Version 2 (or later version)
 http://www.gnu.org/licenses/
 
-Bouncy Castle Crypto APIs 
+### Bouncy Castle Crypto APIs 
 Copyright (c) 2000 - 2009 The Legion Of The Bouncy Castle 
 http://www.bouncycastle.org 
 Adaptation of the MIT X11 License 
 http://www.bouncycastle.org/licence.html
 
-JPedal
+### JPedal
 (C) Copyright 1997-2008, IDRsolutions and Contributors.
 http://www.jpedal.org
 GNU Lesser General Public License Version 2.1 (or later version)
@@ -63,34 +62,34 @@ http://www.gnu.org/licenses/
 Icons are from the "Tango Desktop Project"
 http://tango.freedesktop.org/Tango_Desktop_Project
 
-*******************************************************************************
-	HOW TO INSTALL AND UNINSTALL
-*******************************************************************************
+## HOW TO INSTALL AND UNINSTALL
 
 I have decided not to provide installers any more, this is because I want to 
 dedicate more time on development than on deployment, this could change in the 
 future especially if someone else wants to help maintaining packages for specific 
 platforms. For the time general purpose archives are distributed with binaries
-and scripts for all systems. 
+and scripts for all systems.
 
-Download the zip or tar.gz archive of the latest version from source-forge
-(http://sourceforge.net/projects/jpdfbookmarks/) and extract the folder
+Download the zip or tar.gz archive of the latest version from GitHub
+(https://github.com/mavaddat/jpdfbookmarks) and extract the folder
 jpdfbookmarks-x.x.x to a position on your drive. 
 Inside that folder you have both the windows executables and the Linux scripts 
-to launch the application. 
+to launch the application.
 
 IMPORTANT: this software requires a Java Runtime Environment version 6 or later
 for information on how to install one on your system, or to check if you already
 have it, go to http://www.java.com or search your system's software
 repositories.
 
-On Linux 
-========
+### Install Uninstall On Linux 
+
 You should extract the folder in a path without spaces and check if the scripts 
 have execution permissions and if they don't use the following command:
 
-$ chmod +x jpdfbookmarks jpdfbookmarks_cli 
-$ chmod +x link_this_in_linux_path.sh link_this_in_linux_path_cli.sh
+```bash
+ chmod +x jpdfbookmarks jpdfbookmarks_cli 
+ chmod +x link_this_in_linux_path.sh link_this_in_linux_path_cli.sh
+```
 
 The jpdfbookmarks and jpdfbookmarks_cli scripts are intended to be used from the
 installation folder, so supposing you have extracted the folder to 
@@ -121,8 +120,8 @@ the PATH folder if you created it with the command:
 
 $rm /usr/local/bin/jpdfbookmarks 
 
-On Windows
-==========
+### Install Uninstall On Windows
+
 To launch the graphical user interface of the program on Windows double click
 jpdfbookmarks.exe, the program can take the pdf file to open as an argument to
 facilitate shell integration. To use the program on the command-line use the
@@ -133,12 +132,14 @@ variable, you can easily find instructions on how to accomplish this on the web.
 To uninstall just delete the extracted folder and cancel the path to the same 
 folder from the PATH environment variable if you added it. 
 
-Universal
-=========
+### Install Uninstall Universal
+
 For all the systems you can launch the program after you have extracted the 
 folder with:
 
-$ java -jar /full/path/jpdfbookmarks/jpdfbookmarks.jar
+```bash
+ java -jar /full/path/jpdfbookmarks/jpdfbookmarks.jar
+```
 
 it's important to provide the full path to the jpdfbookmarks.jar file.
 
@@ -146,9 +147,7 @@ On many systems also double clicking on jpdfbookmarks.jar will work to launch
 the application.
 
 
-*******************************************************************************
-	HOW TO EXECUTE 
-*******************************************************************************
+## HOW TO EXECUTE
 
 Here follows a short help on the jpdfbookmarks parameters.
 
@@ -186,66 +185,69 @@ jpdfbookmarks.exe.
  -v,--version                Version number.
 
 In the bookmarks.txt file each line is a bookmark and the hierarchy is made by
-tab characters (not spaces),in the format <Title of bookmark/target
+tab characters &Tab; (not spaces),in the format <Title of bookmark/target
 page[,FitType,TopOffset,LeftOffset] like the following example:
 Chapter 1/23
-[TAB]Para 1.1/25,FitWidth,96
-[TAB][TAB]Para 1.1.1/26,FitHeight,43
+&Tab;Para 1.1/25,FitWidth,96
+&Tab;&Tab;Para 1.1.1/26,FitHeight,43
 Chapter 2/30,TopLeft,120,42
-[TAB]Para 2.1/32,FitPage.
+&Tab;Para 2.1/32,FitPage.
 It is also possible to use an extended format to specify the text style, the
 color and the open or close state of the bookmark, like the following example:
 Para 1.1/25,Red,bold,italic,open,FitWidth,96 or
 Para 1.1/25,Green,noBold,noItalic,closed,FitWidth,96
 
-*******************************************************************************
-	HOW TO BUILD 
-*******************************************************************************
+## HOW TO BUILD
 
-My development environment is the JDK 6, I use the Netbeans IDE version 6.7.1
-but you can build jpdfbookmarks on the command line using ant if you prefer.
-Netbeans have very good subversion integration if you use this IDE I recommend
-it, otherwise download an appropriate subversion client for your system, I will
-first guide you to build the program in Netbeans and then on the command line.
+My development environment is the JDK 6, I use the [VS Code](../../microsoft/vscode) version 1.52 but you can build jpdfbookmarks on the command line using ant if you prefer.
+VS Code has very good git integration if you use this IDE I recommend
+it, otherwise download an appropriate git client for your system, I will
+first guide you to build the program in VS Code and then on the command line.
 
-From the Netbeans menu choose "Team->Subversion->Checkout" and on the dialog
+From the VS Code menu choose "View ➡ Command Pallet ➡ Git ➡ Clone" and on the dialog
 the repository URL to enter is:
 
-https://jpdfbookmarks.svn.sourceforge.net/svnroot/jpdfbookmarks/trunk
+`https://github.com/mavaddat/jpdfbookmarks.git`
 
 click next and you will get to the following another panel, choose trunk as the
 repository folder and check "Skip "trunk" and checkout only its content", choose
 the local folder, for example:
 
-C:\Users\username\Documents\NetbeansProjects\jpdfbookmarks
+C:\Users\username\Documents\VS CodeProjects\jpdfbookmarks
 
-and check "Scan for Netbeans Projects after Checkout", then click Finish.
+and check "Scan for VS Code Projects after Checkout", then click Finish.
 Wait for the download to finish and then you will get a message box, click on
 "Open Project ..." and on the opened dialog select the project
 jpdfbookmarks_core, check "Open Required" and click Open.
 
-Run the project in Netbeans with F6 key or with the appropriate Run menu item.
+Run the project in VS Code with F5 key or with the appropriate Run menu item.
 
 If you prefer using the command line download the current source with the
 command:
 
-$> svn co https://jpdfbookmarks.svn.sourceforge.net/svnroot/jpdfbookmarks/trunk jpdfbookmarks
+ ```bash
+ git clone https://github.com/mavaddat/jpdfbookmarks.git
+```
 
 enter the directory containing the main project with:
 
-$> cd jpdfbookmarks/jpdfbookmarks_core
+ ```bash
+ cd jpdfbookmarks/jpdfbookmarks_core
+```
 
 build the project with:
 
-$> ant jar
+ ```bash
+ ant jar
+```
 
 execute the program with:
 
-$> java -jar dist/jpdfbookmarks.jar
+ ```bash
+ java -jar dist/jpdfbookmarks.jar
+```
 
-*******************************************************************************
-	HOW TO PACKAGE
-*******************************************************************************
+## HOW TO PACKAGE
 
 I have decided not to provide installers for jpdfbookmarks but only archives
 containing binaries, the reason is that I prefer spending my time programming
@@ -256,8 +258,8 @@ art packages for specific systems.
 To create the archives there are two scripts in the Packaging folder, 
 packager.bat if you are in Windows, and packager.sh if you are on Linux. 
 
-On Windows
-==========
+### Packaging On Windows
+
 The packager.bat batch script depends on 7zip software to create the archives, 
 you must modify the script to use it on your system, find the line:
 
@@ -267,37 +269,29 @@ and substitute the path with the 7zip installation folder on your system, than
 simply run the batch file after you have built jpdfbookmarks to create the
 zip and tar.gz archives.
 
-On Linux
-========
+### Packaging On Linux
+
 Run the packager.sh script with:
 
-$ sh packager.sh
+```bash
+ sh packager.sh
+```
 
- 
-
-*******************************************************************************
-	HOW TO HELP
-*******************************************************************************
+## HOW TO HELP
 
 There are really many ways to help a small GPL project like this, here I give 
 some hints but feel free to offer any other idea you have.
 
-- report bugs;
-- correct bugs submitting patches;
+- [report bugs](/issues);
+- correct bugs submitting [pull requests](/pull);
 - write documentation or tutorials;
 - write translations of the program or of the documentation;
 - create better icons;
 - suggest new features;
-- create Installers; 
+- create Installers;
 ...
 
-For more instructions and information go to my blog 
-http://flavianopetrocchi.blogspot.com/ or to 
-http://sourceforge.net/projects/jpdfbookmarks/ please post your comments and bug
+For more instructions and information go to [my blog](http://flavianopetrocchi.blogspot.com/)or to [GitHub](https://github.com/mavaddat/jpdfbookmarks) please post your comments and bug
 reports.
 
 I hope this will help you getting your job done, let me know.
-
-Best Regards,
-
-Flaviano Petrocchi
